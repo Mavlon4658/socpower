@@ -1,0 +1,247 @@
+input::placeholder 
+  color: rgba(24, 24, 24, 0.2)
+.overlay-pass
+	position: relative
+.overlay-pass
+  margin-top: 30px
+.overlay-control 
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	display: inline-block;
+	width: 40px;
+	height: 20px;
+	background: url(../img/modal/eye.png) 0 0 no-repeat
+.overlay-control
+  transform: translateY(-50%)
+  top: 50%
+
+
+.overlay-control.view 
+	background: url(../img/modal/eye.png) 0 0 no-repeat
+.close
+  box-shadow: 2px 33px 51px rgba(0, 0, 0, 0.05)
+  background-color: #f6f7fb
+  padding: 20px
+  border-radius: 50%
+  position: absolute
+  top: -20px
+  right: -20px
+  &_popap
+    z-index: 2
+.overlay 
+  background-color: #508dfe
+  position: fixed
+  z-index: 5
+  height: 100%
+  width: 100%
+  top: 0
+  left: 0
+  align-items: center
+  justify-content: center
+  display: none
+ 
+
+  &-link
+    display: flex
+    align-items: center
+    flex-direction: column
+    margin-top: 60px
+  &-a
+    font-family: "Proxima Nova Regular", sans-serif
+    font-size: 25px
+    font-weight: 600
+    color: #0c182e
+    &__end 
+      margin-top: 25px
+    &__regist
+      margin-top: 0px
+  &-1
+    overflow: auto
+    background-color: #508dfe
+    position: fixed
+    z-index: 5
+    height: 100%
+    width: 100%
+    top: 0
+    left: 0
+    display: flex
+    align-items: center
+    justify-content: center
+  &__subtitle
+      color: #1a1a1a
+      font-family: "Proxima Nova Regular", sans-serif
+      font-size: 25px
+      font-weight: 400
+      text-align: center
+      margin: auto
+      margin-top: 30px
+      max-width: 440px
+  &-round
+    position: absolute
+    top: 20px
+    right: 20px
+  &__form
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-top: 50px
+  &__title
+   text-align: center
+   color: #0a1026
+   font-family: "Proxima Nova Semibold", sans-serif
+   font-size: 40px
+   font-weight: 400
+   z-index: 2
+  &__input
+    padding-left: 80px
+    width: 340px
+    box-shadow: 2px 33px 51px rgba(0, 0, 0, 0.05)
+    border-radius: 45px
+    background-color: #ffffff
+    border: 0px
+    margin: auto
+    outline: none
+    color: rgba(24, 24, 24, 1)
+    font-family: "Proxima Nova Regular", sans-serif
+    font-size: 20px
+    font-weight: 400
+    padding-top: 27px
+    padding-bottom: 27px
+    &-user
+      margin-top: 0px
+      background-image: url(../img/modal/user_2.webp)
+      background-repeat: no-repeat
+      background-position: 30px center
+    &-end
+        background-image: url(../img/modal/key.webp)
+        background-repeat: no-repeat
+        background-position: 30px center
+  &__button
+    border-radius: 45px
+    background-color: #508dff
+    background-image: linear-gradient(to right, #2f73ff 0%, #68a0fe 100%)
+    display: flex
+    box-shadow: 0 5px 30px -5px rgba(47, 115, 255, 1)
+    align-items: center
+    margin-top: 65px
+    padding: 30px 160px
+    justify-content: center
+    &:hover, &:focus, &:visited, &:active
+      color:#eff0f4
+      background-image: linear-gradient(to right, #0f50d4 0%, #3f7ce4 100%)
+      box-shadow: 0 5px 30px -5px rgba(15, 80, 212, 1)
+   
+    &-text
+        margin-right: 25px
+        color: #ffffff
+        font-family: "Proxima Nova Semibold", sans-serif
+        font-size: 25px
+        font-weight: 400
+
+.overlay.active 
+  display: block;
+
+.overlay-1 .flex-popap 
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+.overlay .flex-popap 
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+.overlay-1 .flex-popap .popap 
+  position: relative;
+  background-color: #304247
+  border-radius: 50px;
+  padding: 60px 25px;
+  margin: 0 10px;
+  width: 661px
+  box-shadow: 2px 33px 51px rgba(0, 0, 0, 0.05)
+  border-radius: 20px
+  background-color: #e0ebf3
+.overlay .flex-popap .popap 
+  position: relative;
+  background-color: #304247
+  border-radius: 50px;
+  padding: 60px 25px;
+  margin: 0 10px;
+  width: 661px
+  box-shadow: 2px 33px 51px rgba(0, 0, 0, 0.05)
+  border-radius: 20px
+  background-color: #e0ebf3
+
+.popap span 
+  position: absolute
+  top: 0
+  right: 0
+  padding-top: 10px
+  padding-right: 20px
+  cursor: pointer
+.popap h2 
+  z-index: 2
+.mod
+  &__conf
+    margin-top: 10px
+    font-size: 14px
+  &__label
+    margin-right: 10px
+    vertical-align: middle
+
+@media (max-width: 768px)
+ .mod
+    &__conf
+      font-size: 10px
+ .overlay
+   &-control
+     right: 14px
+   &__button
+     font-size: 20px
+     padding: 30px 120px
+   &__title
+     font-size: 20px
+   &__subtitle
+       font-size: 16px
+   &__input
+    font-size: 24px
+    max-width: 300px
+ .overlay-1 .flex-popap .popap 
+    height: auto
+    width: auto
+    padding: 50px 25px
+ .overlay .flex-popap .popap 
+    height: auto
+    width: auto
+    padding: 50px 25px
+@media (max-width: 530px)
+  .close
+      padding: 12px
+      top: 0
+      right: 0
+  .overlay
+    &-link
+      margin-top: 40px
+    &-a
+      font-size: 20px
+    &__input
+        font-size: 14px
+        max-width: 200px
+        &-end
+          background-size: 26px
+        &-user
+          background-size: 26px
+    &-round
+      display: none
+    &__button
+        margin-top: 40px
+        padding: 30px 80px
+
+@media (max-width: 330px)
+  .overlay .flex-popap .popap 
+    padding: 50px 15px
+  .overlay
+    &__input
+      font-size: 10px
+      max-width: 160px

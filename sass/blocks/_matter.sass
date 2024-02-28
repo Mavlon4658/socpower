@@ -1,0 +1,88 @@
+.section-matter
+    padding-top: 150px
+    padding-bottom: 100px
+.matter
+    &-text
+        margin-top: 40px
+        color: #0f1323
+        font-family: "Proxima Nova Regular", sans-serif
+        font-size: 22px
+        font-weight: 400
+        font-style: normal
+        letter-spacing: normal
+        line-height: 30px
+        width: 90%
+        display: none
+    &-active
+        display: flex
+        &__cursor
+            transform: rotate(180deg)
+            transition: 0.2s all
+    &-part
+        display: flex
+        flex-direction: column
+        width: auto
+        margin-top: 60px
+        display: flex
+        flex-direction: column
+        align-items: center
+        box-shadow: 2px 33px 51px rgba(0, 0, 0, 0.05)
+        border-radius: 22px
+        background-color: #ffffff
+        padding: 35px
+        cursor: pointer
+    &-block
+
+    &-item
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 100%
+    &-content
+        display: flex
+        align-items: center
+        &__blue
+            color: #ffffff
+            font-family: "Proxima Nova Semibold", sans-serif
+            font-size: 45px
+            font-weight: 400
+            box-shadow: 2px 33px 51px rgba(0, 0, 0, 0.05)
+            background-color: #ffffff
+            background-image: linear-gradient(to right, #2f73ff 0%, #68a0fe 100%)
+            padding: 20px 35px
+            border-radius: 50%
+        &__text
+            margin-left: 35px
+            color: #0f1323
+            font-family: "Proxima Nova Semibold", sans-serif
+            font-size: 25px
+            font-weight: 400
+
+@media (max-width: 940px)
+    .section-matter
+        padding-top: 90px
+        padding-bottom: 60px
+    .matter
+        &-text
+            font-size: 15px
+            line-height: 20px
+        &-cursor
+            width: 33px
+            height: 17px
+        &-part
+            margin-top: 50px
+            padding: 30px 20px
+        &-content
+            &__blue
+                font-size: 33px
+                padding: 14px 25px
+            &__text
+                margin-right: 20px
+                margin-left: 15px
+                font-size: 17px
+
+@media (max-width: 400px)
+    .matter
+        &-content
+            &__text
+                font-size: 14px

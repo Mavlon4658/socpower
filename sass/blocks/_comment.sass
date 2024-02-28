@@ -1,0 +1,94 @@
+.section-comment
+    padding-top: 200px
+.comment
+    &-slider
+        margin-top: 100px
+        position: relative
+    &-item
+        display: flex
+        flex-direction: column
+        align-items: center
+        outline: none
+        margin-bottom: 60px
+    &-left
+        position: absolute
+        top: 35%
+        left: 0
+        cursor: pointer
+        z-index: 1
+        transform: rotate(180deg)
+        filter: grayscale(1)
+        opacity: 0.4
+        &:hover
+            filter: none
+            transition: 0.2s all
+            opacity: 1
+
+    &-right
+        position: absolute
+        top: 35%
+        right: 0
+        cursor: pointer
+        z-index: 1
+        filter: grayscale(1)
+        opacity: 0.4
+        &:hover
+            filter: none
+            transition: 0.2s all
+            opacity: 1
+
+    &-video
+        box-shadow: 2px 33px 51px rgba(0, 0, 0, 0.05)
+        border-radius: 22px
+        background-color: #191919
+        width: 861px
+        height: 456px
+    &-text
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        align-self: start
+        margin-top: 30px
+        &__title
+            color: #0f1323
+            font-family: "Proxima Nova Semibold", sans-serif
+            font-size: 30px
+            font-weight: 400
+        &__subtitle
+            margin-top: 15px
+            color: #0f1323
+            font-family: "Proxima Nova Regular", sans-serif
+            font-size: 25px
+            font-weight: 400
+
+@media (max-width: 1200px)
+    .comment
+        &-left
+            visibility: hidden
+        &-right
+            visibility: hidden
+@media (max-width: 1000px)
+    .comment
+        &-video
+            width: 100%
+        &-content
+            width: 100%
+@media (max-width: 768px)
+    .section-comment
+        padding-top: 100px
+    .comment
+        &-item
+            margin-bottom: 50px
+        &-slider
+            margin-top: 65px
+        &-text
+            &__title
+                font-size: 20px
+            &__subtitle
+                font-size: 17px
+                margin-top: 10px
+@media (max-width: 600px)
+    .comment
+        &-video
+            height: 300px
+        

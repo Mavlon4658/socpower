@@ -1,0 +1,150 @@
+.header
+    padding-top: 30px
+    padding-bottom: 70px
+    &-block
+        display: flex
+        justify-content: space-between
+        align-items: center
+        flex-wrap: wrap
+    &-logo
+        color: #121212
+        font-family: "Proxima Nova Bold", sans-serif
+        font-size: 25px
+        font-weight: 700
+        font-style: normal
+    &-menu
+        &__button
+            display: none
+        &__a
+            color: #959595
+            font-family: "Proxima Nova Regular", sans-serif
+            font-weight: 400
+            font-size: 15px
+            margin-right: 35px
+            &:last-child
+                margin-right: 0px
+            &:hover
+                font-weight: 600
+                color: #121212
+                border-bottom: 2px solid #4080f4
+                transition: 0.1s all
+                padding-bottom: 5px
+    &-online
+        display: flex
+        &__round
+            align-self: flex-start
+        &__text
+            display: flex
+            flex-direction: column
+            margin-left: 10px
+        &__regular
+            opacity: 0.5
+            color: #121212
+            font-family: "Proxima Nova Regular", sans-serif
+            font-size: 12px
+            font-weight: 400
+        &__bold
+            color: #121212
+            font-family: "Proxima Nova Semibold", sans-serif
+            font-size: 15px
+            font-weight: 400
+            opacity: 1
+    &-button
+        border-radius: 29px
+        background-color: #4080f4
+        background-image: linear-gradient(to right, #5ac88d 0%, #54e296 100%)
+        display: flex
+        align-items: center
+        padding: 20px 30px
+        &:hover, &:focus, &:visited, &:active
+           background-image: linear-gradient(to right, #3ab875  0%, #4bb87e 100%) 
+        &__text
+            margin-left: 12px  
+            color: #ffffff
+            font-family: "Proxima Nova Regular", sans-serif
+            font-size: 15px
+            font-weight: 400
+
+@media (max-width: 1240px)
+    .header
+        &-logo
+            margin-right: 40px
+        &-online
+            margin-left: 40px
+        &-button
+            margin-left: 40px
+        &-menu
+            &__a
+                margin-right: 20px
+
+
+@media (max-width: 1154px)
+    .header
+        &-button
+           margin-top: 24px
+
+@media (max-width: 1080px)
+    .header
+        &-button
+            margin-left: 0px
+
+@media (max-width: 819px)
+    .header
+        &-online
+            margin-left: 0px
+
+@media (max-width: 768px)
+    .header
+        &-link
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            position: absolute
+            top: 110px
+        &-logo
+            margin-right: 0px
+        &-menu
+            position: absolute
+            transform: translateX(-1000%)
+            transition: 0.5s all
+            background-color: #5b94ff
+            &__button
+                padding: 20px 30px
+                border-radius: 29px
+                border: 2px solid #ffffff
+                margin-top: 28px
+                display: flex
+                align-items: center
+                &-text
+                    color: #ffffff
+                    font-family: "Proxima Nova Regular"
+                    font-size: 15px
+                    font-weight: 400
+                    margin-left: 10px
+            &__a
+                margin-right: 0px
+                color: #ffffff
+                font-size: 17px
+                margin-top: 22px
+                &:hover
+                    border: 0
+                    color: white
+                    font-weight: 400
+                    padding-bottom: 0px
+                &:first-child
+                    margin-top: 0px
+        &-button
+            display: none
+@media (max-width: 480px)
+    .header
+        &-logo
+            font-size: 18px
+@media (max-width: 360px)
+    .header
+        &-logo
+            font-size: 14px
+        &-online
+            &__bold
+                font-size: 12px
+            

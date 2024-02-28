@@ -1,0 +1,81 @@
+.service
+    display: flex
+    align-items: center
+    flex-direction: column
+    &-block
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        width: 100%
+    &-video
+        margin-top: 90px
+        width: 861px
+        height: 456px
+        box-shadow: 2px 33px 51px rgba(0, 0, 0, 0.05)
+        border-radius: 22px
+        background-color: #191919
+    &-item
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        max-width: 30%
+        margin-top: 80px
+        position: relative
+        &__text
+            color: #0f1323
+            font-family: "Proxima Nova", sans-serif
+            font-size: 25px
+            font-weight: 400
+            font-style: normal
+            letter-spacing: normal
+            line-height: 35px
+            margin-top: 20px
+        &__background
+            position: absolute
+            opacity: 0.1
+            color: #0c182e
+            font-family: "Proxima Nova Extrabld", sans-serif
+            font-size: 154px
+            font-weight: 400
+            font-style: normal
+            letter-spacing: normal
+            line-height: 135.63px
+            left: 50%
+            transform: translate(-60%)
+            top: 20px
+@media (max-width: 1500px)
+    .section-service
+        margin-bottom: 60px
+    .service
+        &-item
+            max-width: 320px
+            &__background
+                transform: translate(-60%)
+@media (max-width: 1000px)
+    .service
+        &-video
+            width: 100%
+@media (max-width: 768px)
+    .service
+        &-video
+            max-width: 100%
+            margin-top: 80px
+        &-block
+            justify-content: center
+            flex-direction: column
+            align-items: center
+        &-item
+            margin-top: 60px
+            justify-content: center
+            text-align: center
+            align-items: center
+            &__background
+                display: none
+            &__text
+                line-height: 25px
+                font-size: 17px
+
+@media (max-width: 600px)
+    .service
+        &-video
+            height: 300px
