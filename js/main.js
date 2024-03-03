@@ -64,6 +64,41 @@ $(document).ready(function(){
         return false;
     });
 
+    $('.article__slider').each(function (idx, el) {
+        let slider = new Swiper(el, {
+            slidesPerView: 'auto',
+            // spaceBetween: 70,
+        })
+    })
+
+    $('.article__slider_2__wrap').each(function (idx, el) {
+        let slider = new Swiper($(el).find('.article__slider_2')[0], {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            navigation: {
+                nextEl: $(el).find('.slider_next')[0],
+                prevEl: $(el).find('.slider_prev')[0]
+            }
+        })
+    })
+
+    $('.account__slider_3').each(function (idx, el) {
+        let swiper = new Swiper(el, {
+            slidesPerView: 'auto',
+            spaceBetween: 0,
+        })
+    })
+
+    if ($('.img_wrap__right').length) {
+        new Swiper('.img_wrap__right .swiper', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            navigation: {
+                nextEl: '.img_wrap__right .slider_next',
+                prevEl: '.img_wrap__right .slider_prev'
+            }
+        })
+    }
 
 });
 

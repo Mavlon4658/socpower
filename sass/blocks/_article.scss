@@ -1,0 +1,222 @@
+.wrapper {
+    width: 100%;
+    overflow: hidden;
+
+    .container {
+        max-width: 1332px;
+    }
+}
+
+.article {
+    .container {
+        position: relative;
+        overflow: visible;
+        padding-top: 95px;
+    }
+
+    &__bg_title {
+        font-size: 150px;
+        font-weight: 900;
+        font-family: "Zona Pro", sans-serif;
+        color: rgb(237, 240, 243);
+        letter-spacing: 0;
+        display: flex;
+        align-items: center;
+        line-height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+
+        img {
+            height: 100px;
+            margin-left: 70px;
+        }
+    }
+
+    &__subtitle {
+        font-size: 41px;
+        font-family: "Proxima Nova Light", sans-serif;
+        color: rgb(0, 0, 0);
+    }
+
+    &__title {
+        font-size: 75px;
+        font-family: "Proxima Nova Regular", sans-serif;
+        color: rgb(0, 0, 0);
+        margin-top: 30px;
+        line-height: 100%;
+    }
+
+    &__sec_title {
+        font-size: 40px;
+        font-family: "Proxima Nova Regular", sans-serif;
+        color: rgb(0, 0, 0);
+        margin-bottom: 30px;
+    }
+
+    &__line {
+        height: 4px;
+        width: 360px;
+        background: #558dfe;
+        display: block;
+        margin: 37px 0;
+    }
+
+    &__description {
+        font-size: 28px;
+        font-family: "Proxima Nova Regular", sans-serif;
+        font-weight: 400;
+        color: rgb(0, 0, 0);
+
+        &_wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 37px;
+            max-width: 1250px;
+        }
+    }
+
+    &__alert {
+        border-left: 4px solid #558dfe;
+        font-size: 28px;
+        font-family: "Proxima Nova Bold", sans-serif;
+        color: rgb(0, 0, 0);
+        font-style: italic;
+        font-weight: bold;
+        padding-left: 20px;
+    }
+
+    &__card_img {
+        max-width: 1000px;
+        margin: 37px 0;
+
+        &_2 {
+            display: block;
+            margin: 70px 0;
+            max-width: 710px;
+        }
+    }
+
+    &__registration {
+        margin-top: 70px;
+    }
+
+    &__slider {
+        margin: 70px 0;
+
+        .swiper-wrapper {
+            justify-content: space-between;
+        }
+
+        .swiper-slide {
+            width: auto;
+
+            &:nth-child(2) {
+                width: 410px;
+            }
+            
+            &:nth-child(1) {
+                width: 850px;
+            }
+        }
+    }
+
+    &__slider_2 {
+        margin: 70px 0;
+        width: 800px;
+
+        &__wrap {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+
+            .slider_btn {
+                img {
+                    width: 35px;
+                }
+            }
+        }
+
+
+        .swiper-slide {
+            height: 400px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+
+    &__slider_3 {
+        margin: 70px 0;
+
+        .swiper-wrapper {
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .swiper-slide {
+            img {
+            }
+
+            &:nth-child(1) {
+                width: 710px;
+            }
+
+            &:nth-child(2) {
+                width: 580px;
+            }
+        }
+    }
+
+    &__account {
+        .article__slider {
+            width: calc(100% + 40px);
+
+            .swiper-slide {
+                &:nth-child(2) {
+                    width: 450px;
+                }
+            }
+        }
+    }
+
+    &__vkontakt {
+        padding: 40px 0 200px;
+
+        .img_wrap {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin: 70px 0;
+
+            &__left {
+                width: 770px;
+            }
+
+            &__right {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+
+                .slider_btn {
+                    img {
+                        width: 20px;
+                    }
+                }
+
+                .swiper {
+                    width: 420px;
+                }
+            }
+        }
+
+        .article__description_wrap {
+            max-width: 100%;
+        }
+    }
+}
