@@ -100,5 +100,31 @@ $(document).ready(function(){
         })
     }
 
+    let article_card = 3;
+    function sortArticleCard () {
+        $('.article__cards_item').each(function (idx, el) {
+            if (idx + 1 > article_card) {
+                $(el).hide(0);
+            } else {
+                $(el).show(0)
+            }
+        })
+    }
+
+    $('.article .show_more').click(function () {
+        article_card += 3;
+        sortArticleCard();
+
+        if (article_card >= $('.article__cards_item').length) {
+            $('.article .show_more').css({
+                position: 'relative',
+                zIndex: '-1',
+                opacity: '0'
+            })
+        }
+    })
+
+    sortArticleCard();
+
 });
 
