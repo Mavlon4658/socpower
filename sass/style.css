@@ -2308,6 +2308,9 @@ input::placeholder {
   max-width: 1332px;
 }
 
+.article ul, .article ol, .article dl {
+  list-style-type: none;
+}
 .article .container {
   position: relative;
   overflow: visible;
@@ -2470,4 +2473,91 @@ input::placeholder {
 }
 .article__vkontakt .article__description_wrap {
   max-width: 100%;
+}
+.article__cards {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+.article__cards_item {
+  display: flex;
+  align-items: stretch;
+  background: white;
+  gap: 50px;
+  padding: 40px;
+  border-radius: 50px;
+  background-color: rgb(246, 247, 251);
+  box-shadow: 0px 2px 20px 0px rgba(34, 63, 122, 0.23);
+}
+.article__cards_item__left {
+  width: 500px;
+  border-radius: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.article__cards_item__right {
+  padding-bottom: 30px;
+}
+.article__cards_item__right h3 {
+  font-size: 30px;
+  font-family: "Proxima Nova Light", sans-serif;
+  color: rgb(0, 0, 0);
+  line-height: 2;
+}
+.article__cards_item__right h2 {
+  font-size: 60px;
+  font-family: "Proxima Nova Bold", sans-serif;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  max-width: 560px;
+  margin: 25px 0;
+}
+.article__cards_item__right_line {
+  height: 4px;
+  width: 280px;
+  background: #558dfe;
+  display: block;
+  margin-bottom: 50px;
+}
+.article__cards_item__right p {
+  font-size: 26px;
+  font-family: "Proxima Nova Regular", sans-serif;
+  font-weight: 400;
+  color: rgb(1, 1, 1);
+}
+.article__cards_item__right a {
+  background: #558dfe;
+  min-height: auto;
+  padding: 30px 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  border-radius: 100px;
+  margin-top: 30px;
+  box-shadow: 0px 0px 57px 0px rgba(142, 181, 254, 0.75);
+}
+.article__cards_item__right a span {
+  font-size: 45px;
+  font-family: "Proxima Nova Bold", sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  line-height: 100%;
+}
+.article__cards_item__right a img {
+  height: 25px;
+}
+.article .show_more {
+  transform: rotateZ(90deg);
+}
+.article .show_more img {
+  width: 30px;
+}
+.article .show_more__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 45px 0 100px;
 }/*# sourceMappingURL=style.css.map */
