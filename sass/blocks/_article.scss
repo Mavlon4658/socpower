@@ -41,7 +41,26 @@
         @include media(350) {
             padding-top: 50px;
         }
+
+        &.article__container {
+            @include media (830) {
+                padding-top: 160px;
+            }
+
+            @include media(630) {
+                padding-top: 130px;
+            }
+
+            @include media(500) {
+                padding-top: 100px;
+            }
+
+            @include media(400) {
+                padding-top: 80px;
+            }
+        }
     }
+
 
     &__bg_title {
         font-size: 150px;
@@ -74,12 +93,69 @@
             height: 100px;
             margin-left: 70px;
         }
+
+        &.article_page__title {
+            @include media(830) {
+                font-size: 150px;
+            }
+
+            @include media(630) {
+                font-size: 120px;
+            }
+
+            @include media(500) {
+                font-size: 100px;
+            }
+
+            @include media(410) {
+                font-size: 80px;
+            }
+
+            br {
+                @include media(-830) {
+                    display: none;
+                }
+            }
+
+            img {
+                @include media(830) {
+                    position: absolute;
+                    top: 0;
+                    left: 350px;
+                }
+
+                @include media(630) {
+                    left: 260px;
+                    top: -20px;
+                    height: 130px;
+                }
+
+                @include media(500) {
+                    left: 180px;
+                    top: -50px;
+                }
+
+                @include media(400) {
+                    left: 140px;
+                    height: 100px;
+                    top: -30px;
+                }
+            }
+        }
     }
 
     &__subtitle {
         font-size: 41px;
         font-family: "Proxima Nova Light", sans-serif;
         color: rgb(0, 0, 0);
+
+        @include media(768) {
+            font-size: 32px;
+        }
+
+        @include media(475) {
+            font-size: 22px;
+        }
     }
 
     &__title {
@@ -88,6 +164,14 @@
         color: rgb(0, 0, 0);
         margin-top: 30px;
         line-height: 100%;
+
+        @include media(768) {
+            font-size: 50px;
+        }
+
+        @include media(475) {
+            font-size: 36px;
+        }
     }
 
     &__sec_title {
@@ -95,6 +179,14 @@
         font-family: "Proxima Nova Regular", sans-serif;
         color: rgb(0, 0, 0);
         margin-bottom: 30px;
+
+        @include media(768) {
+            font-size: 32px;
+        }
+
+        @include media(475) {
+            font-size: 26px;
+        }
     }
 
     &__line {
@@ -103,6 +195,15 @@
         background: #558dfe;
         display: block;
         margin: 37px 0;
+
+        @include media(768) {
+            height: 3px;
+            width: 200px;
+        }
+
+        @include media(475) {
+            width: 130px;
+        }
     }
 
     &__description {
@@ -110,6 +211,15 @@
         font-family: "Proxima Nova Regular", sans-serif;
         font-weight: 400;
         color: rgb(0, 0, 0);
+        line-height: 170%;
+
+        @include media(768) {
+            font-size: 22px;
+        }
+
+        @include media(475) {
+            font-size: 18px;
+        }
 
         &_wrap {
             display: flex;
@@ -127,16 +237,34 @@
         font-style: italic;
         font-weight: bold;
         padding-left: 20px;
+
+        @include media(768) {
+            font-size: 22px;
+        }
+
+        @include media(475) {
+            font-size: 18px;
+            padding-left: 15px;
+            border-left: 3px solid #558dfe;
+        }
     }
 
     &__card_img {
         max-width: 1000px;
         margin: 37px 0;
 
+        @include media(1150) {
+            width: 100%;
+        }
+
         &_2 {
             display: block;
             margin: 70px 0;
             max-width: 710px;
+
+            @include media(800) {
+                width: 100%;
+            }
         }
     }
 
@@ -147,6 +275,17 @@
     &__slider {
         margin: 70px 0;
 
+        @include media(850) {
+            margin: 0;
+        }
+        
+        &_wrap {
+            @include media(1300) {
+                display: flex;
+                gap: 20px;
+            }
+        }
+
         .swiper-wrapper {
             justify-content: space-between;
         }
@@ -156,10 +295,78 @@
 
             &:nth-child(2) {
                 width: 410px;
+
+                @include media(1340) {
+                    width: 350px;
+                }
+
+                @include media(1300) {
+                    width: auto;
+                }
             }
             
             &:nth-child(1) {
                 width: 850px;
+                
+                @include media(1340) {
+                    width: 750px;
+                }
+
+                @include media(1300) {
+                    width: auto;
+                }
+            }
+
+            img {
+                @include media(1300) {
+                    width: 100%;
+                    height: 350px;
+                    object-fit: contain;
+                }
+            }
+        }
+
+        &__btn {
+            &_prev {
+                @include media(-1300) {
+                    display: none;
+                }
+                
+                @include media(1300) {
+                    flex-shrink: 0;
+                    width: 30px;
+                    padding: 0;
+                    margin: 0;
+                }
+
+                @include media(450) {
+                    width: 20px;
+                }
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            &_next {
+                @include media(-1300) {
+                    display: none;
+                }
+                
+                @include media(1300) {
+                    flex-shrink: 0;
+                    width: 30px;
+                    padding: 0;
+                    margin: 0;
+                }
+
+                @include media(450) {
+                    width: 20px;
+                }
+
+                img {
+                    width: 100%;
+                }
             }
         }
     }
@@ -168,14 +375,42 @@
         margin: 70px 0;
         width: 800px;
 
+        @include media(800) {
+            margin: 0;
+        }
+
+        @include media(550) {
+            margin: -20px 0;
+        }
+
+        @include media(450) {
+            margin: -40px 0;
+        }
+
+        @include media(380) {
+            margin: -80px 0;
+        }
+
         &__wrap {
             display: flex;
             align-items: center;
             gap: 50px;
 
+            @include media(800) {
+                gap: 20px;
+            }
+
             .slider_btn {
+                width: 35px;
+                flex-shrink: 0;
+                padding: 0;
+
+                @include media(450) {
+                    width: 20px;
+                }
+
                 img {
-                    width: 35px;
+                    width: 100%;
                 }
             }
         }
@@ -195,6 +430,22 @@
     &__slider_3 {
         margin: 70px 0;
 
+        @include media(800) {
+            margin: 0;
+        }
+
+        @include media(600) {
+            margin: -30px 0;
+        }
+
+        @include media(450) {
+            margin: -80px 0;
+        }
+
+        @include media(480) {
+            margin: -120px 0;
+        }
+
         .swiper-wrapper {
             justify-content: space-between;
             width: 100%;
@@ -202,16 +453,69 @@
 
         .swiper-slide {
             img {
+                width: 100%;
+
+                @include media(1220) {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
             }
 
             &:nth-child(1) {
                 width: 710px;
+
+                @include media(1340) {
+                    width: 600px;
+                }
+
+                @include media (1220) {
+                    height: 450px;
+                }
             }
 
             &:nth-child(2) {
                 width: 580px;
+
+                @include media(1340) {
+                    width: 470px;
+                }
+
+                @include media (1220) {
+                    height: 450px;
+                }
             }
         }
+
+        &__wrap {
+            @include media(1220) {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 20px;
+            }
+
+            .slider_btn {
+                @include media(-1220) {
+                    display: none;
+                }
+
+                @include media(1220) {
+                    padding: 0;
+                    width: 35px;
+                    flex-shrink: 0;
+                }
+
+                @include media(450) {
+                    width: 20px;
+                }
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
     }
 
     &__account {
@@ -235,6 +539,12 @@
             justify-content: space-between;
             margin: 70px 0;
 
+            @include media(1340) {
+                flex-direction: column;
+                align-items: center;
+                gap: 50px;
+            }
+
             &__left {
                 width: 770px;
             }
@@ -245,13 +555,51 @@
                 gap: 20px;
 
                 .slider_btn {
+                    width: 20px;
+                    flex-shrink: 0;
+                    padding: 0;
+
                     img {
-                        width: 20px;
+                        width: 100%;
                     }
                 }
 
                 .swiper {
                     width: 420px;
+
+                    @include media(550) {
+                        width: 400px;
+                    }
+
+                    @include media(500) {
+                        width: 300px;
+                    }
+
+                    @include media(400) {
+                        width: 250px;
+                    }
+
+                    .swiper-slide {
+                        @include media(550) {
+                            height: 400px;
+                        }
+
+                        @include media(500) {
+                            height: 350px;
+                        }
+
+                        @include media(400) {
+                            height: 300px;
+                        }
+
+                        img {
+                            @include media(550) {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: contain;
+                            }
+                        }
+                    }
                 }
             }
         }

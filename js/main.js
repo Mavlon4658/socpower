@@ -66,8 +66,18 @@ $(document).ready(function(){
 
     $('.article__slider').each(function (idx, el) {
         let slider = new Swiper(el, {
-            slidesPerView: 'auto',
-            // spaceBetween: 70,
+            slidesPerView: 1,
+            spaceBetween: 20,
+            breakpoints: {
+                1300: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 0,
+                }
+            },
+            navigation: {
+                nextEl: $('.article__slider__btn_next')[idx],
+                prevEl: $('.article__slider__btn_prev')[idx],
+            }
         })
     })
 
@@ -82,10 +92,19 @@ $(document).ready(function(){
         })
     })
 
-    $('.account__slider_3').each(function (idx, el) {
-        let swiper = new Swiper(el, {
-            slidesPerView: 'auto',
-            spaceBetween: 0,
+    $('.article__slider_3__wrap').each(function (idx, el) {
+        let swiper = new Swiper($(el).find('.article__slider_3')[0], {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            navigation: {
+                nextEl: $(el).find('.slider_next')[0],
+                prevEl: $(el).find('.slider_prev')[0]
+            },
+            breakpoints: {
+                1220: {
+                    slidesPerView: 'auto'
+                }
+            }
         })
     })
 
