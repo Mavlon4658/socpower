@@ -53,11 +53,13 @@
         border-radius: 29px
         background-color: #4080f4
         background-image: linear-gradient(to right, #5ac88d 0%, #54e296 100%)
+        box-shadow: 0 5px 10px 5px rgba(88, 210, 144, 0.45)
         display: flex
         align-items: center
         padding: 20px 30px
-        &:hover, &:focus, &:visited, &:active
-           background-image: linear-gradient(to right, #3ab875  0%, #4bb87e 100%) 
+        &:hover, &:active
+           background-image: linear-gradient(to right, #3ab875  0%, #4bb87e 100%)
+           box-shadow: none
         &__text
             margin-left: 12px  
             color: #ffffff
@@ -67,21 +69,21 @@
 
 @media (max-width: 1240px)
     .header
-        &-logo
-            margin-right: 40px
-        &-online
-            margin-left: 40px
-        &-button
-            margin-left: 40px
+        // &-logo
+        //     margin-right: 40px
+        // &-online
+        //     margin-left: 40px
+        // &-button
+        //     margin-left: 40px
         &-menu
             &__a
-                margin-right: 20px
+                margin-right: 10px
 
 
 @media (max-width: 1154px)
-    .header
-        &-button
-           margin-top: 24px
+    // .header
+    //     &-button
+    //        margin-top: 24px
 
 @media (max-width: 1080px)
     .header
@@ -93,7 +95,7 @@
         &-online
             margin-left: 0px
 
-@media (max-width: 768px)
+@media (max-width: 992px)
     .header
         &-link
             display: flex
